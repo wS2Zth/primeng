@@ -333,7 +333,7 @@ export class TabPanel extends BaseComponent implements AfterContentInit, OnDestr
                                         @if (tab.closeIconTemplate) {
                                             <ng-template *ngTemplateOutlet="tab.closeIconTemplate"></ng-template>
                                         } @else {
-                                            <TimesIcon (click)="close($event, tab)" />
+                                            <TimesIcon class="p-tabview-close"  (click)="close($event, tab)" />
                                         }
                                     }
                                 }
@@ -700,7 +700,7 @@ export class Tabs extends BaseComponent implements AfterContentInit, AfterViewCh
 
         return headerElement
             ? DomHandler.getAttribute(headerElement, 'data-p-disabled') ||
-              DomHandler.getAttribute(headerElement, 'data-pc-section') === 'inkbar'
+                DomHandler.getAttribute(headerElement, 'data-pc-section') === 'inkbar'
                 ? this.findNextHeaderAction(headerElement)
                 : headerElement
             : null;
@@ -711,7 +711,7 @@ export class Tabs extends BaseComponent implements AfterContentInit, AfterViewCh
 
         return headerElement
             ? DomHandler.getAttribute(headerElement, 'data-p-disabled') ||
-              DomHandler.getAttribute(headerElement, 'data-pc-section') === 'inkbar'
+                DomHandler.getAttribute(headerElement, 'data-pc-section') === 'inkbar'
                 ? this.findPrevHeaderAction(headerElement)
                 : headerElement
             : null;
@@ -903,4 +903,4 @@ export class Tabs extends BaseComponent implements AfterContentInit, AfterViewCh
     imports: [Tabs, TabPanel],
     exports: [Tabs, TabPanel, SharedModule],
 })
-export class TabsModule {}
+export class TabsModule { }

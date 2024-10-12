@@ -141,6 +141,10 @@ const theme = ({ dt }) => `
     background: ${dt('tabs.active.bar.background')};
     transition: 250ms cubic-bezier(0.35, 0, 0.25, 1);
 }
+
+.p-tabview-close {
+    z-index: 1;
+}
 `;
 
 const classes = {
@@ -208,6 +212,10 @@ export enum TabsClasses {
      * Class name of the tab panel element
      */
     tabpanel = 'p-tabs-panel',
+    /**
+     * Class name of the close icon
+     */
+    tablose = 'p-tabview-close',
 }
 
-export interface TabsStyle extends BaseStyle {}
+export interface TabsStyle extends BaseStyle { }
